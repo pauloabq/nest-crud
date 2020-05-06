@@ -9,11 +9,12 @@ import { TypeOrmModule } from '@nestjs/typeorm';
   imports: [ContactsModule,       
             TypeOrmModule.forRoot({
                 type: 'sqlite',
-                database: 'db',
+                database: 'database.sqlite',
                 entities: [__dirname + '/**/*.entity{.ts,.js}'],
                 synchronize: true,
             }),],
   controllers: [AppController],
   providers: [AppService],
 })
+
 export class AppModule {}
